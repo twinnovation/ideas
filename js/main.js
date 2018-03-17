@@ -497,24 +497,3 @@ function calculatePermutations() {
 }
 
 calculatePermutations();
-
-/*
-howdy boys whats the worst part of the twinnovation podcast? 
-thats right, the very real possibility that you will all run out of ideas and the show will meet its bitter end.
-the idea of the podcast ending is a thought that keeps me up at night. i was a day one of the podfathers so you'd better believe
-im also a day one of the twinnovation boys. i cant get through work without ripping through episodes of your pod
-
-this brings me to my pitch. the twinnovation idea generator. this would be a site
-
-great idea right? wrong. its an excellent idea, and totally doable. how do i know it's doable, you ask? because i already built it you herbs.
-thats right folks. you've just been hit by a twist so unexpected that not even m night shayamalan equipped with a telescope could see it coming.
-not only is the twinnovation idea generator real, it's live and works like a charmelo anthony. visit it at http://dnlrj.github.io/twinnovation or *shortlink*. 
-
-the site works by having a database of objects, apps, and features, and a set of prompts. the generator picks random items from these lists and plugs them into prompts. these lists are made up of influences from previous twinnovation episodes, and of course a bunch of new shit.
-you can set the options
-
-right now, the generator is capable
-of creating *PERMNUMBER* unique ideas, but this number can only grow and grow with suggestions from the nation. in the settings section on the site, you will see a link to submit suggestions.
- feel free to 
-visit this bad boy on your phone (aka on the train on the way to record the pod) as the mobile version is fully functional and quite beautiful, i might add.
-*/
