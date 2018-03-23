@@ -222,8 +222,8 @@ button {
   #settings #credits {
     width: 100vw;
     margin-top: 60px; }
-    #settings #credits p:first-of-type {
-      margin-bottom: 4px; }
+    #settings #credits p {
+      margin-bottom: 9px; }
     #settings #credits a {
       font-weight: 700;
       color: #212020;
