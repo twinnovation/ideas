@@ -137,7 +137,6 @@ function addObjects() {
 	objects.push(new Object( "an ointment" , "ointment" ));
 	objects.push(new Object( "a candle" , "candles" ));
 	objects.push(new Object( "a safe" , "safes" ));
-	objects.push(new Object( "a Facebook group" , "Facebook groups" ));
 	objects.push(new Object( "a stress ball" , "stress balls" ));
 	objects.push(new Object( "a vacuum" , "vacuums" ));
 	objects.push(new Object( "a plunger" , "plungers" ));
@@ -152,6 +151,14 @@ function addObjects() {
 	objects.push(new Object( "a plate" , "plates" ));
 	objects.push(new Object( "a robot" , "robots" ));
 	objects.push(new Object( "food" , "food" ));
+	objects.push(new Object( "earplugs" , "earplugs" ));
+	objects.push(new Object( "a guitar pick" , "guitar picks" ));
+	objects.push(new Object( "pajamas" , "pajamas" ));
+	objects.push(new Object( "wallpaper" , "wallpaper" ));
+	objects.push(new Object( "ham" , "ham" ));
+	objects.push(new Object( "a skateboard" , "skateboards" ));
+	objects.push(new Object( "a Segway" , "Segways" ));
+	objects.push(new Object( "a stuffed animal" , "stuffed animals" ));
 }
 addObjects();
 
@@ -195,7 +202,10 @@ var features = [
 	"but you have to pay every time you use it",
 	"that can purify water",
 	"that you can have sex with",
-	"that dissolves in water"
+	"that dissolves in water",
+	"that secretly records you",
+	"can imitate your voice",
+	"absorbs all sound"
 ];
 
 var apps = [
@@ -227,7 +237,8 @@ var apps = [
 	"Photoshop",
 	"Skype",
 	"Twitch",
-	"HQ Trivia"
+	"HQ Trivia",
+	"SoundCloud",
 ];
 
 var adjectives = [
@@ -291,7 +302,11 @@ var adjectives = [
 	"fashionable",
 	"bulletproof",
 	"WiFi-enabled",
-	"low calorie"
+	"low calorie",
+	"pickled",
+	"interchangeable",
+	"smokable",
+	"fried"
 ]
 
 var audiences = [
@@ -318,7 +333,23 @@ var audiences = [
 	"artists",
 	"bullies",
 	"twins",
-	"Mike Karnell, specifically"
+	"Mike Karnell, specifically",
+	"pets",
+	"parents",
+	"virgins",
+	"priests",
+	"chefs",
+	"your ex-girlfriend",
+	"your dad's friend from work",
+	"scientists",
+	"farmers",
+	"high school students",
+	"janitors",
+	"Wall Street traders",
+	"rich people",
+	"poor people",
+	"the middle class",
+	"strippers"
 ]
 
 function getRandomInt(min, max) {
