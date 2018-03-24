@@ -121,7 +121,6 @@ function addObjects() {
 	objects.push(new Object( "a microwave" , "microwaves" ));
 	objects.push(new Object( "a laser pointer" , "laser pointers" ));
 	objects.push(new Object( "a bra" , "bras" ));
-	objects.push(new Object( "a Chrome extension" , "chrome extensions" ));
 	objects.push(new Object( "a helmet" , "helmets" ));
 	objects.push(new Object( "a crockpot" , "crockpots" ));
 	objects.push(new Object( "a stove" , "stoves" ));
@@ -159,6 +158,7 @@ function addObjects() {
 	objects.push(new Object( "a skateboard" , "skateboards" ));
 	objects.push(new Object( "a Segway" , "Segways" ));
 	objects.push(new Object( "a stuffed animal" , "stuffed animals" ));
+	objects.push(new Object( "cheese" , "cheese" ));
 }
 addObjects();
 
@@ -204,8 +204,10 @@ var features = [
 	"that you can have sex with",
 	"that dissolves in water",
 	"that secretly records you",
-	"can imitate your voice",
-	"absorbs all sound"
+	"that can imitate your voice",
+	"that absorbs all sound",
+	"that makes you stronger",
+	"that come in a family bundle"
 ];
 
 var apps = [
@@ -306,7 +308,9 @@ var adjectives = [
 	"pickled",
 	"interchangeable",
 	"smokable",
-	"fried"
+	"fried",
+	"anonymous",
+	"hipster"
 ]
 
 var audiences = [
@@ -349,7 +353,41 @@ var audiences = [
 	"rich people",
 	"poor people",
 	"the middle class",
-	"strippers"
+	"strippers",
+	"guitar players",
+	"carnies",
+	"pregnant women",
+	"stoners",
+	"gym bros",
+	"athletes",
+	"basketball players",
+	"celebrities",
+	"flight attendants",
+	"cat ladies",
+	"NASCAR enthusiasts",
+	"frat boys",
+	"the government",
+	"underachieving rich kids",
+	"vegans",
+	"troubled youth",
+	"vape kids",
+	"accountants",
+	"guys who wear cargo shorts",
+	"dads",
+	"your drug dealer",
+	"anime kids",
+	"gamers",
+	"alcoholics",
+	"leaders",
+	"business men",
+	"slam poets",
+	"girl scouts",
+	"professionals",
+	"strangers",
+	"hipsters",
+	"criminals",
+	"hippies",
+	"nerds"
 ]
 
 function getRandomInt(min, max) {
