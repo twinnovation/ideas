@@ -403,7 +403,14 @@ var audiences = [
 	"music festival kids",
 	"military wives",
 	"soccer moms",
-	"the piss twins"
+	"the piss twins",
+	"feminists",
+	"fun uncles",
+	"babysitters",
+	"Canadians",
+	"serial killers",
+	"church groups",
+	"your neighbors"
 ]
 
 function getRandomInt(min, max) {
