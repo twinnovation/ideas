@@ -150,7 +150,6 @@ function addObjects() {
 	objects.push(new Object( "a plate" , "plates" ));
 	objects.push(new Object( "a robot" , "robots" ));
 	objects.push(new Object( "food" , "food" ));
-	objects.push(new Object( "earplugs" , "earplugs" ));
 	objects.push(new Object( "a guitar pick" , "guitar picks" ));
 	objects.push(new Object( "pajamas" , "pajamas" ));
 	objects.push(new Object( "wallpaper" , "wallpaper" ));
@@ -159,6 +158,9 @@ function addObjects() {
 	objects.push(new Object( "a Segway" , "Segways" ));
 	objects.push(new Object( "a stuffed animal" , "stuffed animals" ));
 	objects.push(new Object( "cheese" , "cheese" ));
+	objects.push(new Object( "a screen protector" , "screen protectors" ));
+	objects.push(new Object( "a bath bomb" , "bath bombs" ));
+	objects.push(new Object( "socks" , "socks" ));
 }
 addObjects();
 
@@ -207,7 +209,10 @@ var features = [
 	"that can imitate your voice",
 	"that absorbs all sound",
 	"that makes you stronger",
-	"that come in a family bundle"
+	"that comes in a family bundle",
+	"with a built in mirror",
+	"that comes with a lifetime warranty",
+	"with a protective titanium shell"
 ];
 
 var apps = [
@@ -241,6 +246,8 @@ var apps = [
 	"Twitch",
 	"HQ Trivia",
 	"SoundCloud",
+	"Tumblr",
+	"Bumble"
 ];
 
 var adjectives = [
@@ -310,7 +317,11 @@ var adjectives = [
 	"smokable",
 	"fried",
 	"anonymous",
-	"hipster"
+	"hipster",
+	"fluffy",
+	"double-layered",
+	"matte-black",
+	"proprietary"
 ]
 
 var audiences = [
@@ -387,7 +398,12 @@ var audiences = [
 	"hipsters",
 	"criminals",
 	"hippies",
-	"nerds"
+	"nerds",
+	"concert-goers",
+	"music festival kids",
+	"military wives",
+	"soccer moms",
+	"the piss twins"
 ]
 
 function getRandomInt(min, max) {
