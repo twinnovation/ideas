@@ -161,6 +161,7 @@ function addObjects() {
 	objects.push(new Object( "a screen protector" , "screen protectors" ));
 	objects.push(new Object( "a bath bomb" , "bath bombs" ));
 	objects.push(new Object( "socks" , "socks" ));
+	objects.push(new Object( "toilet paper" , "toilet paper" ));
 }
 addObjects();
 
@@ -206,13 +207,24 @@ var features = [
 	"that you can have sex with",
 	"that dissolves in water",
 	"that secretly records you",
-	"that can imitate your voice",
 	"that absorbs all sound",
 	"that makes you stronger",
 	"that comes in a family bundle",
 	"with a built in mirror",
 	"that comes with a lifetime warranty",
-	"with a protective titanium shell"
+	"with a protective titanium shell",
+	"cures the common cold",
+	"that is controlled by an iPhone app",
+	"that translates Spanish",
+	"that makes you more attractive",
+	"that reminds you of your appointments",
+	"that you can hide cash in",
+	"that torments your enemies for you",
+	"that kills you",
+	"but it's made of gold",
+	"but it only costs 10 cents to produce",
+	"with a fingerprint scanner",
+	"that gets you laid"
 ];
 
 var apps = [
@@ -321,7 +333,9 @@ var adjectives = [
 	"fluffy",
 	"double-layered",
 	"matte-black",
-	"proprietary"
+	"proprietary",
+	"voice-controlled",
+	"see-through"
 ]
 
 var audiences = [
@@ -410,7 +424,9 @@ var audiences = [
 	"Canadians",
 	"serial killers",
 	"church groups",
-	"your neighbors"
+	"your neighbors",
+	"Uber drivers",
+	"the deaf"
 ]
 
 function getRandomInt(min, max) {
