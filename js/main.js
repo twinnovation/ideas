@@ -174,6 +174,7 @@ function addObjects() {
 	objects.push(new Object( "a bucket" , "buckets" ));
 	objects.push(new Object( "a sink" , "sinks" ));
 	objects.push(new Object( "perfume" , "perfume" ));
+	objects.push(new Object( "an HDMI cable" , "HDMI cables" ));
 }
 addObjects();
 
@@ -366,7 +367,8 @@ var adjectives = [
 	"non-perishable",
 	"playable",
 	"pre-owned",
-	"fragrant"
+	"fragrant",
+	"reusable"
 ]
 
 var audiences = [
@@ -474,7 +476,7 @@ function getRandomInt(min, max) {
 
 function generateIdea(scriptType) {
 	if (activeSettings == 0) {
-		scriptType = getRandomInt(1,5);
+		scriptType = getRandomInt(1,7);
 	}
 	else {
 		scriptType = activeSettings[Math.floor(Math.random()*activeSettings.length)];
@@ -507,16 +509,19 @@ function generateIdea(scriptType) {
 
 		case 6:
 			idea = objects[getRandomInt(0,objects.length-1)].p + " for " + audiences[getRandomInt(0,audiences.length-1)];
-		break;		
+		break;
 
+		case 7:
+			idea = adjectives[getRandomInt(0,adjectives.length-1)] + " " + objects[getRandomInt(0,objects.length-1)].p + " for " + audiences[getRandomInt(0,audiences.length-1)];
+		break;
 	}
 
-	console.log(idea);
+	console.log(idea + " (" + scriptType + ")");
 	label.innerHTML = idea;
 
 }
 
-var activeSettings = [1,2,3,4,5,6];
+var activeSettings = [1,2,3,4,5,6,7];
 var checkboxes = document.querySelectorAll("input");
 
 checkboxes.forEach(function(e) {
@@ -537,6 +542,7 @@ function handleSettings() {
 	if (checkboxes[3].checked) {activeSettings.push(4);}
 	if (checkboxes[4].checked) {activeSettings.push(5);}
 	if (checkboxes[5].checked) {activeSettings.push(6);}
+	if (checkboxes[6].checked) {activeSettings.push(7);}
 
 	settingsPanel.style.display = "none";
 	settingsOpen == false;
@@ -557,7 +563,8 @@ var perm3 = a * e;
 var perm4 = c * c;
 var perm5 = c * d;
 var perm6 = a * d;
-const allpermutations = perm1 + perm2 + perm3 + perm4 + perm5 + perm6;
+var perm7 = a * d * e;
+const allpermutations = perm1 + perm2 + perm3 + perm4 + perm5 + perm6 + perm7;
 
 function calculatePermutations() {
 
@@ -567,6 +574,7 @@ function calculatePermutations() {
 	perm4 = c * c;
 	perm5 = c * d;
 	perm6 = a * d;
+	perm7 = a * d * e;
 
 	if (checkboxes[0].checked == false) {perm1 = 0;}
 	if (checkboxes[1].checked == false) {perm2 = 0;}
@@ -574,8 +582,9 @@ function calculatePermutations() {
 	if (checkboxes[3].checked == false) {perm4 = 0;}
 	if (checkboxes[4].checked == false) {perm5 = 0;}
 	if (checkboxes[5].checked == false) {perm6 = 0;}
+	if (checkboxes[6].checked == false) {perm7 = 0;}
 
-	permutations = perm1 + perm2 + perm3 + perm4 + perm5 + perm6;
+	permutations = perm1 + perm2 + perm3 + perm4 + perm5 + perm6 + perm7;
 	
 	if (permutations === 0) {
 			permutations = allpermutations;
