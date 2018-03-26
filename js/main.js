@@ -162,7 +162,18 @@ function addObjects() {
 	objects.push(new Object( "a bath bomb" , "bath bombs" ));
 	objects.push(new Object( "socks" , "socks" ));
 	objects.push(new Object( "toilet paper" , "toilet paper" ));
-}
+	objects.push(new Object( "a flowerpot" , "flowerpots" ));
+	objects.push(new Object( "a mop" , "mops" ));
+	objects.push(new Object( "a broom" , "brooms" ));
+	objects.push(new Object( "a lanyard" , "lanyards" ));
+	objects.push(new Object( "a shirt button" , "shirt buttons" ));
+	objects.push(new Object( "a keyboard" , "keyboards" ));
+	objects.push(new Object( "a light switch " , "light switches" ));
+	objects.push(new Object( "a coat hanger" , "coat hangers" ));
+	objects.push(new Object( "a curtain" , "curtains" ));
+	objects.push(new Object( "a bucket" , "buckets" ));
+	objects.push(new Object( "a sink" , "sinks" ));
+	objects.push(new Object( "perfume" , "perfume" ));
 addObjects();
 
 
@@ -224,7 +235,14 @@ var features = [
 	"but it's made of gold",
 	"but it only costs 10 cents to produce",
 	"with a fingerprint scanner",
-	"that gets you laid"
+	"that gets you laid",
+	"that can switch on/off with a clap",
+	"that can hover",
+	"that is invisible to children",
+	"with facial recognition",
+	"with straps for easy carrying",
+	"with UV protection",
+	"with monthly DLC"
 ];
 
 var apps = [
@@ -259,7 +277,11 @@ var apps = [
 	"HQ Trivia",
 	"SoundCloud",
 	"Tumblr",
-	"Bumble"
+	"Bumble",
+	"Amazon Prime",
+	"FaceTime",
+	"PantsOrShorts",
+	"Chrome"
 ];
 
 var adjectives = [
@@ -335,7 +357,15 @@ var adjectives = [
 	"matte-black",
 	"proprietary",
 	"voice-controlled",
-	"see-through"
+	"see-through",
+	"odorless",
+	"self-aware",
+	"collapsable",
+	"extendable",
+	"non-perishable",
+	"playable",
+	"pre-owned",
+	"fragrant"
 ]
 
 var audiences = [
@@ -426,7 +456,15 @@ var audiences = [
 	"church groups",
 	"your neighbors",
 	"Uber drivers",
-	"the deaf"
+	"the deaf",
+	"sneakerheads",
+	"hypebeasts",
+	"skaters",
+	"wannabes",
+	"gardeners",
+	"podcast hosts",
+	"homeowners",
+	"landlords"
 ]
 
 function getRandomInt(min, max) {
