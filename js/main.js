@@ -174,6 +174,7 @@ function addObjects() {
 	objects.push(new Object( "a bucket" , "buckets" ));
 	objects.push(new Object( "a sink" , "sinks" ));
 	objects.push(new Object( "perfume" , "perfume" ));
+}
 addObjects();
 
 
