@@ -265,6 +265,7 @@ button {
             margin: 10px 0 0 0;
             color: rgba(0, 0, 0, 0.6);
             padding: 0;
+            text-align: left !important;
         }
     }
 
@@ -333,14 +334,18 @@ button {
         text-align: center;
     }
 
-    #permutationstext {
+    #permutationstext, #ideasGeneratedText {
         margin-top: 40px;
         margin-bottom: 30px;
 
-        #permutationslabel {
+        #permutationslabel, #ideasGeneratedLabel {
             font-weight: 700;
             font-size: 1.2rem;
         }
+    }
+
+    #ideasGeneratedText {
+        margin-top: 20px;
     }
 
     #floater {

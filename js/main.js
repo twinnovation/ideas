@@ -16,7 +16,6 @@ newIdeaBtn.addEventListener("click", function() {
 	 	label.classList.remove("scale-anim")
 	}, 200);
 
-
 });
 
 var settingsPanel = document.querySelector("#settings");
@@ -40,7 +39,6 @@ closeSettingsBtn.addEventListener("click", function() {
 closeSettingsIcon.addEventListener("click", function() {
 	handleSettings();
 });
-
 
 var objects = [];
 
@@ -177,8 +175,6 @@ function addObjects() {
 	objects.push(new Object( "an HDMI cable" , "HDMI cables" ));
 }
 addObjects();
-
-
 
 var features = [
 	"with a camera attached",
@@ -474,6 +470,9 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+var ideasGenerated = 0;
+var ideasGeneratedLabel = document.querySelector("#ideasGeneratedLabel");
+
 function generateIdea(scriptType) {
 	if (activeSettings == 0) {
 		scriptType = getRandomInt(1,7);
@@ -518,6 +517,9 @@ function generateIdea(scriptType) {
 
 	console.log(idea + " (" + scriptType + ")");
 	label.innerHTML = idea;
+
+	ideasGenerated++;
+	ideasGeneratedLabel.innerHTML = ideasGenerated;
 
 }
 
