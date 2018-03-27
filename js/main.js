@@ -4,15 +4,20 @@
 var body = document.querySelector("body");
 var newIdeaBtn = document.querySelector("#newIdeaBtn");
 var banner = document.querySelector("#banner");
+var firstClick = true;
 
 newIdeaBtn.addEventListener("click", function() {
+
+	if (firstClick==true) {
+		log.innerHTML="";
+		firstClick = false;
+	}
+
 	generateIdea(0);
 
-	//banner.classList.add("rotate-anim");
 	label.classList.add("scale-anim");
 
 	setTimeout(function(){
-	 	//banner.classList.remove("rotate-anim");
 	 	label.classList.remove("scale-anim")
 	}, 200);
 
@@ -38,6 +43,29 @@ closeSettingsBtn.addEventListener("click", function() {
 
 closeSettingsIcon.addEventListener("click", function() {
 	handleSettings();
+});
+
+var logPanel = document.querySelector("#logPanel");
+var logBtn = document.querySelector("#logBtn");
+var log = document.querySelector("#log");
+var logOpen = false;
+
+logBtn.addEventListener("click", function() {
+	if (logOpen == false) {
+		logPanel.style.display = "block";
+		logOpen == true;
+	}
+});
+
+var closeLogBtn = document.querySelector("#closeLogBtn");
+var closeLogIcon = document.querySelector("#closeLogIcon");
+
+closeLogBtn.addEventListener("click", function() {
+	handleLog();
+});
+
+closeLogIcon.addEventListener("click", function() {
+	handleLog();
 });
 
 var objects = [];
@@ -365,7 +393,7 @@ var adjectives = [
 	"pre-owned",
 	"fragrant",
 	"reusable"
-]
+];
 
 var audiences = [
 	"shoplifters",
@@ -464,7 +492,7 @@ var audiences = [
 	"podcast hosts",
 	"homeowners",
 	"landlords"
-]
+];
 
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -518,6 +546,8 @@ function generateIdea(scriptType) {
 	console.log(idea + " (" + scriptType + ")");
 	label.innerHTML = idea;
 
+	addToLog(idea);
+
 	ideasGenerated++;
 	ideasGeneratedLabel.innerHTML = ideasGenerated;
 
@@ -549,6 +579,28 @@ function handleSettings() {
 	settingsPanel.style.display = "none";
 	settingsOpen == false;
 }
+
+function handleLog() {
+
+	logPanel.style.display = "none";
+	logOpen == false;
+}
+
+function addToLog(ideaText) {
+
+    var newPforLog = document.createElement('p');
+	newPforLog.appendChild(document.createTextNode(ideaText));
+
+	newPforLog.addEventListener("click", function() {
+
+		handleLog();
+		label.innerHTML = ideaText;
+
+	});
+	    
+    log.insertBefore(newPforLog, log.childNodes[0]);
+}
+
 
 var label = document.querySelector("#label");
 var permutationsLabel = document.querySelector("#permutationslabel");

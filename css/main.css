@@ -164,6 +164,14 @@ button {
       width: 26px; }
     #buttons #settingsBtn:hover {
       background-color: #ffecb2; }
+  #buttons #logBtn {
+    margin-right: -2px;
+    padding: 13px 15px;
+    background-color: #dea808; }
+    #buttons #logBtn img {
+      width: 26px; }
+    #buttons #logBtn:hover {
+      background-color: #ffecb2; }
 
 .rotate-anim {
   animation: animationFramesR linear .2s;
@@ -173,16 +181,84 @@ button {
   animation: animationFramesS ease-in-out .2s;
   transform-origin: 50% 50%; }
 
-#settings {
+#logPanel, #settings {
   padding: 40px 0;
-  background: #fec108;
-  color: black;
   display: none;
   width: 100vw;
   min-height: 100vh;
   position: absolute;
   box-sizing: border-box;
   top: 0; }
+  #logPanel #closeLogBtn, #logPanel #closeSettingsBtn, #settings #closeLogBtn, #settings #closeSettingsBtn {
+    left: 50%;
+    transform: translate(-50%);
+    position: relative; }
+  #logPanel #closeSettingsIcon, #logPanel #closeLogIcon, #settings #closeSettingsIcon, #settings #closeLogIcon {
+    width: 30px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    transition: all 200ms ease-out; }
+    #logPanel #closeSettingsIcon:hover, #logPanel #closeLogIcon:hover, #settings #closeSettingsIcon:hover, #settings #closeLogIcon:hover {
+      transform: scale(1.15); }
+  #logPanel h3, #settings h3 {
+    font-size: 4rem;
+    margin: 0;
+    text-align: center; }
+  #logPanel p, #settings p {
+    margin: 0;
+    text-align: center; }
+
+#logPanel {
+  background: white;
+  color: black;
+  padding: 40px 0 0 0; }
+  #logPanel #closeLogBtn {
+    background-color: black;
+    color: white;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    left: initial;
+    transform: none;
+    box-shadow: 0 0 7px 0px #00000059; }
+    #logPanel #closeLogBtn:hover {
+      background-color: #dea808;
+      color: black; }
+  #logPanel #ideasGeneratedText {
+    margin: 20px 0; }
+    #logPanel #ideasGeneratedText #ideasGeneratedLabel {
+      font-weight: 700;
+      font-size: 1.2rem; }
+  #logPanel #log {
+    margin-top: 20px; }
+    #logPanel #log p {
+      margin: 0;
+      text-align: left;
+      padding: 15px 22px;
+      box-shadow: 0px -2px 7px 0px rgba(0, 0, 0, 0.28);
+      transition: all 150ms ease-in-out;
+      cursor: pointer; }
+      #logPanel #log p:hover {
+        padding: 15px 22px 15px 40px;
+        font-weight: 700; }
+      #logPanel #log p:nth-of-type(even) {
+        background-color: #fec108;
+        color: black; }
+      #logPanel #log p:nth-of-type(odd) {
+        background-color: #dea808;
+        color: black; }
+
+#settings {
+  background: #fec108;
+  color: black; }
+  #settings #closeSettingsBtn {
+    background-color: #ffecb2;
+    color: black; }
+    #settings #closeSettingsBtn:hover {
+      background-color: black;
+      color: #FFC107; }
   #settings .settingsrow {
     overflow: auto;
     margin: 0 20px 20px 30px; }
@@ -222,9 +298,9 @@ button {
       transform: scale(1.15); }
   #settings #credits {
     width: 100vw;
-    margin-top: 60px; }
+    margin-top: 40px; }
     #settings #credits p {
-      margin-bottom: 9px; }
+      margin-bottom: 12px; }
     #settings #credits a {
       font-weight: 700;
       color: #212020;
@@ -245,14 +321,12 @@ button {
   #settings p {
     margin: 0;
     text-align: center; }
-  #settings #permutationstext, #settings #ideasGeneratedText {
+  #settings #permutationstext {
     margin-top: 40px;
     margin-bottom: 30px; }
-    #settings #permutationstext #permutationslabel, #settings #permutationstext #ideasGeneratedLabel, #settings #ideasGeneratedText #permutationslabel, #settings #ideasGeneratedText #ideasGeneratedLabel {
+    #settings #permutationstext #permutationslabel {
       font-weight: 700;
       font-size: 1.2rem; }
-  #settings #ideasGeneratedText {
-    margin-top: 20px; }
   #settings #floater {
     display: none;
     width: 14vw;
@@ -335,10 +409,13 @@ button {
       min-height: 90px; }
 
   #newIdeaBtn {
-    width: 75%; }
+    width: 60%; }
 
   #settingsBtn {
-    width: 25%; }
+    width: 20%; }
+
+  #logBtn {
+    width: 20%; }
 
   #settings p, #settings h3 {
     padding: 0 10px; } }

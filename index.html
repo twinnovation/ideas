@@ -26,10 +26,10 @@
         </div>
 
         <div id="buttons">
-            <button id="newIdeaBtn">New Idea</button>
-            <button id="settingsBtn"><img src="img/settings.svg"></button>            
+            <button id="logBtn" tabindex="2"><img src="img/list.svg"></button>
+            <button id="newIdeaBtn" tabindex="1">New Idea</button>
+            <button id="settingsBtn" tabindex="3"><img src="img/settings.svg"></button>
         </div>
-
 
         <div id="settings">
 
@@ -115,8 +115,6 @@
 
             <p id="permutationstext">With these prompts selected, I'll generate <br> <span id="permutationslabel">0000</span> unique ideas!</p>
 
-            <p id="ideasGeneratedText">You've generated <span id="ideasGeneratedLabel">0</span> ideas this session.</p>
-
             <button id="closeSettingsBtn">Save and Close</button>
 
             <img src="img/close.svg" id="closeSettingsIcon">
@@ -129,6 +127,23 @@
                 <p>Featured on <a href="http://twinnovation.biz/post/172158955700/139-no-step-the-season-3-premiere" target="_blank">Episode 139</a> of the show.</p>
             </div>
 
+        </div>
+
+        <div id="logPanel">
+
+            <h3>Idea Log</h3>
+            <p>Look at all your brilliant ideas! Good job!</p>
+
+            <p id="ideasGeneratedText">You've generated <span id="ideasGeneratedLabel">0</span> ideas this session.</p>
+
+            <p><strong>Click an idea to restore it in the main screen.</strong></p>
+
+            <div id="log">
+                <p>You haven't generated any ideas yet!</p>
+            </div>
+
+            <img src="img/close.svg" id="closeLogIcon">
+            <button id="closeLogBtn">Done</button>
 
         </div>
 

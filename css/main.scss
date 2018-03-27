@@ -111,6 +111,8 @@ textarea {
 
 $FontStack: 'Roboto', Helvetica, sans-serif;
 $MainYellow: #fec108;
+$SecondaryYellow: #dea808;
+$TertiaryYellow: #ffecb2;
 
 
 body {
@@ -197,7 +199,6 @@ button {
     transform: translate(-50%);
     bottom: 20vh;
 
-
     #newIdeaBtn {
 
     }
@@ -205,14 +206,28 @@ button {
     #settingsBtn {
         margin-left: -2px;
         padding: 13px 15px;
-        background-color: #dea808;
+        background-color: $SecondaryYellow;
 
         img {
             width: 26px;
         }
 
         &:hover {
-            background-color: #ffecb2;
+            background-color: $TertiaryYellow;
+        }
+    }
+
+    #logBtn {
+        margin-right: -2px;
+        padding: 13px 15px;
+        background-color: $SecondaryYellow;
+
+        img {
+            width: 26px;
+        }
+
+        &:hover {
+            background-color: $TertiaryYellow;
         }
     }
 
@@ -228,16 +243,119 @@ button {
     transform-origin: 50% 50%;
 }
 
-#settings {
+#logPanel, #settings {
     padding: 40px 0;
-    background: $MainYellow;
-    color: black;
     display: none;
     width: 100vw;
     min-height: 100vh;
     position: absolute;
     box-sizing: border-box;
     top: 0;
+
+    #closeLogBtn, #closeSettingsBtn {
+        left: 50%;
+        transform: translate(-50%);
+        position: relative;
+    }
+
+    #closeSettingsIcon, #closeLogIcon {
+        width: 30px;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        transition: all 200ms ease-out;
+
+        &:hover {
+            transform: scale(1.15);
+        }
+    }
+
+    h3 {
+        font-size: 4rem;
+        margin: 0;
+        text-align: center;
+    }
+
+    p {
+        margin: 0;
+        text-align: center;
+    }
+
+}
+
+#logPanel {
+    background: white;
+    color: black;
+    padding: 40px 0 0 0;
+
+    #closeLogBtn {
+        background-color: black;
+        color: white;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        left: initial;
+        transform: none;
+        box-shadow: 0 0 7px 0px #00000059;
+
+        &:hover {
+            background-color: $SecondaryYellow;
+            color: black;
+        }
+    }
+
+    #ideasGeneratedText{
+        margin: 20px 0;
+
+        #ideasGeneratedLabel {
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+    }
+
+    #log {
+        margin-top: 20px;
+
+        p {
+            margin: 0;
+            text-align: left;
+            padding: 15px 22px;
+            box-shadow: 0px -2px 7px 0px rgba(0,0,0,0.28);
+            transition: all 150ms ease-in-out;
+            cursor: pointer;
+
+            &:hover {
+                padding: 15px 22px 15px 40px;
+                font-weight: 700;
+            }
+
+            &:nth-of-type(even) {
+                background-color: $MainYellow;
+                color: black;
+            }
+
+            &:nth-of-type(odd) {
+                background-color: $SecondaryYellow;
+                color: black;
+            }
+        }
+    }
+}
+
+#settings {
+    background: $MainYellow;
+    color: black;
+    
+    #closeSettingsBtn {
+        background-color: $TertiaryYellow;
+        color: black;
+
+        &:hover {
+            background-color: black;
+            color: #FFC107;
+        }
+    }
 
     .settingsrow {
         overflow: auto;
@@ -270,7 +388,7 @@ button {
     }
 
     #closeSettingsBtn {
-        background-color: #ffecb2;
+        background-color: $TertiaryYellow;
         color: black;
         left: 50%;
         transform: translate(-50%);
@@ -297,12 +415,10 @@ button {
 
     #credits {
         width: 100vw;
-        margin-top: 60px;
-        //bottom: 30px;
-        //position: absolute;
+        margin-top: 40px;
 
         p {
-            margin-bottom: 9px;
+            margin-bottom: 12px;
         }
 
         a {
@@ -334,18 +450,14 @@ button {
         text-align: center;
     }
 
-    #permutationstext, #ideasGeneratedText {
+    #permutationstext{
         margin-top: 40px;
         margin-bottom: 30px;
 
-        #permutationslabel, #ideasGeneratedLabel {
+        #permutationslabel {
             font-weight: 700;
             font-size: 1.2rem;
         }
-    }
-
-    #ideasGeneratedText {
-        margin-top: 20px;
     }
 
     #floater {
@@ -391,7 +503,7 @@ button {
     height: 100%;
     transition: all 0.6s cubic-bezier(.19,1,.22,1);
     border: 2px solid transparent;
-    background-color: #ffecb2;
+    background-color: $TertiaryYellow;
     position: relative;
     overflow: hidden;
     cursor: pointer;
@@ -416,7 +528,6 @@ button {
     }
   }
 }
-
 
 
 @keyframes animationFramesR{
@@ -469,11 +580,15 @@ button {
     }
 
     #newIdeaBtn {
-        width: 75%;
+        width: 60%;
     }
 
     #settingsBtn {
-        width: 25%;
+        width: 20%;
+    }
+
+    #logBtn {
+        width: 20%;
     }
 
     #settings {
