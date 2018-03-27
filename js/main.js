@@ -291,7 +291,7 @@ var features = [
 	"with UV protection",
 	"with monthly DLC",
 	"as a halloween costume",
-	"but it's safe to swallow"
+	"but it's safe to swallow",
 	"that can plug into your laptop via USB",
 	"that can change color",
 	"that can call you an Uber",
@@ -305,7 +305,7 @@ var features = [
 	"that reads you the news in the morning",
 	"that can be worn as jewelry",
 	"that can float",
-	"but you assemble it yourself"
+	"but you assemble it yourself",
 	"that gets smarter with machine learning",
 	"but the government uses it to spy on you"
 ];
