@@ -201,6 +201,28 @@ function addObjects() {
 	objects.push(new Object( "a sink" , "sinks" ));
 	objects.push(new Object( "perfume" , "perfume" ));
 	objects.push(new Object( "an HDMI cable" , "HDMI cables" ));
+	objects.push(new Object( "a lock" , "locks" ));
+	objects.push(new Object( "a shelf" , "shelves" ));
+	objects.push(new Object( "a security system" , "security systems" ));
+	objects.push(new Object( "a dog collar" , "dog collars" ));
+	objects.push(new Object( "high heels" , "high heels" ));
+	objects.push(new Object( "foam" , "foam" ));
+	objects.push(new Object( "a belt" , "belts" ));
+	objects.push(new Object( "a container" , "containers" ));
+	objects.push(new Object( "a pizza" , "pizza" ));
+	objects.push(new Object( "sushi" , "sushi" ));
+	objects.push(new Object( "a brick" , "bricks" ));
+	objects.push(new Object( "a suitcase" , "suitcases" ));
+	objects.push(new Object( "a backpack" , "backpacks" ));
+	objects.push(new Object( "a doll" , "dolls" ));
+	objects.push(new Object( "aaaaaaaa" , "sssssssss" ));
+	objects.push(new Object( "a tote bag" , "tote bags" ));
+	objects.push(new Object( "swag" , "swag" ));
+	objects.push(new Object( "a donut" , "donuts" ));
+	objects.push(new Object( "beer" , "beer" ));
+	objects.push(new Object( "money" , "money" ));
+	objects.push(new Object( "a tie" , "ties" ));
+	objects.push(new Object( "a baseball bat" , "baseball bats" ));
 }
 addObjects();
 
@@ -215,7 +237,7 @@ var features = [
 	"that cools you off",
 	"that you can pee in",
 	"that charges your phone",
-	"with an LCD screen",
+	"with an LCD screen in it",
 	"that can do your taxes",
 	"but it costs $1,000,000",
 	"that steals your data",
@@ -250,7 +272,7 @@ var features = [
 	"with a built in mirror",
 	"that comes with a lifetime warranty",
 	"with a protective titanium shell",
-	"cures the common cold",
+	"that cures the common cold",
 	"that is controlled by an iPhone app",
 	"that translates Spanish",
 	"that makes you more attractive",
@@ -264,11 +286,28 @@ var features = [
 	"that gets you laid",
 	"that can switch on/off with a clap",
 	"that can hover",
-	"that is invisible to children",
 	"with facial recognition",
 	"with straps for easy carrying",
 	"with UV protection",
-	"with monthly DLC"
+	"with monthly DLC",
+	"as a halloween costume",
+	"but it's safe to swallow"
+	"that can plug into your laptop via USB",
+	"that can change color",
+	"that can call you an Uber",
+	"that can post to social media for you",
+	"that can cure a hangover",
+	"that never runs out of power",
+	"that can translate Spanish",
+	"that can babysit your kid",
+	"that can generate ideas for Twinnovation",
+	"that can numb your pain",
+	"that reads you the news in the morning",
+	"that can be worn as jewelry",
+	"that can float",
+	"but you assemble it yourself"
+	"that gets smarter with machine learning",
+	"but the government uses it to spy on you"
 ];
 
 var apps = [
@@ -307,7 +346,13 @@ var apps = [
 	"Amazon Prime",
 	"FaceTime",
 	"PantsOrShorts",
-	"Chrome"
+	"Chrome",
+	"Reddit",
+	"Headgum",
+	"Twinnovation",
+	"Find My iPhone",
+	"GroupHole",
+	"uTorrent"
 ];
 
 var adjectives = [
@@ -392,7 +437,23 @@ var adjectives = [
 	"playable",
 	"pre-owned",
 	"fragrant",
-	"reusable"
+	"reusable",
+	"high",
+	"tall",
+	"small",
+	"little",
+	"sticky",
+	"velcro",
+	"foldable",
+	"branded",
+	"cream-filled",
+	"electronic",
+	"acoustic",
+	"analog",
+	"camouflaged",
+	"silent",
+	"genetically modified",
+	"resealable"
 ];
 
 var audiences = [
@@ -413,7 +474,6 @@ var audiences = [
 	"mechanics",
 	"lawyers",
 	"rappers",
-	"the podfathers",
 	"babies",
 	"married couples",
 	"artists",
@@ -491,7 +551,20 @@ var audiences = [
 	"gardeners",
 	"podcast hosts",
 	"homeowners",
-	"landlords"
+	"landlords",
+	"referees",
+	"Twinnovation fans",
+	"Jake and Amir fans",
+	"surgeons",
+	"pornstars",
+	"barbers",
+	"cops",
+	"gamblers",
+	"cult members",
+	"organized crime",
+	"dog owners",
+	"cat owners",
+	"the CTO of Twinnovation"
 ];
 
 function getRandomInt(min, max) {
@@ -503,7 +576,7 @@ var ideasGeneratedLabel = document.querySelector("#ideasGeneratedLabel");
 
 function generateIdea(scriptType) {
 	if (activeSettings == 0) {
-		scriptType = getRandomInt(1,7);
+		scriptType = getRandomInt(1,6);
 	}
 	else {
 		scriptType = activeSettings[Math.floor(Math.random()*activeSettings.length)];
@@ -553,7 +626,7 @@ function generateIdea(scriptType) {
 
 }
 
-var activeSettings = [1,2,3,4,5,6,7];
+var activeSettings = [1,2,3,4,5,6];
 var checkboxes = document.querySelectorAll("input");
 
 checkboxes.forEach(function(e) {
@@ -618,6 +691,7 @@ var perm4 = c * c;
 var perm5 = c * d;
 var perm6 = a * d;
 var perm7 = a * d * e;
+
 const allpermutations = perm1 + perm2 + perm3 + perm4 + perm5 + perm6 + perm7;
 
 function calculatePermutations() {
@@ -641,7 +715,7 @@ function calculatePermutations() {
 	permutations = perm1 + perm2 + perm3 + perm4 + perm5 + perm6 + perm7;
 	
 	if (permutations === 0) {
-			permutations = allpermutations;
+		permutations = allpermutations;
 	}
 
 	permutationsLabel.innerHTML = (permutations).toLocaleString('en');
